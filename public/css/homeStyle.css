@@ -1,0 +1,118 @@
+body{
+    margin:0px;
+    padding:0px;
+    height:100%;
+    width: 100%;
+    background-color: powderblue;
+}
+#products{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin:10px 0px;
+    width:100%;
+}
+.item{
+    margin:5px;
+    border:2px solid lightskyblue;
+    border-radius: 20px;
+}
+.image{
+    width:97%;
+    margin:5px;
+    border-radius: 10px;
+    height:250px;
+}
+.p_name{
+    font-size: 30px;
+    font-weight: bold;
+    margin:0px;
+    margin-left:35%;
+    color:darkmagenta;
+}
+.price{
+    margin:5px;
+}
+.priceData{
+    color:navy;
+    font-size:20px;
+    font-weight:800;
+}
+.item .addCart{
+    width:48%;
+    background-color: #33adff8e;
+    margin-left:5px;
+    color: white;
+    border-radius: 10px;
+}
+.item .description{
+    width:48%;
+    color:white;
+    margin-right:5px;
+    background-color: #FF3333;
+    border-radius: 10px;
+}
+button{
+    cursor:pointer;
+    margin-bottom: 5px;
+}
+a{
+    text-decoration: none;
+    color:White;
+}
+#description{
+    position:fixed;
+    width:100%; 
+    height:100%;
+    display:none;
+    left:0px;
+    top:0px;
+    min-height: 300px;
+    margin:auto;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.6);
+    animation: animatezoom 0.5s;
+}
+.desc-content{
+    width:350px;
+    margin:5% auto;
+    border:2px solid #E8E8E8;
+    padding:5px;
+    background-color: white;
+    border-radius: 10px;
+    overflow:auto;
+}
+@keyframes animatezoom{
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+#description #descDiv{
+    width:100%;
+}
+#description img{
+    width:300px;
+    height:300px;
+    margin:0 auto;
+}
+#descDiv p{
+    display: inline;
+}
+#descDiv button{
+    float:right;
+    color:black;
+    font-size: 18px;
+    border:none;
+    background-color: white;
+    margin-right: 10px;
+}
+@media all and (max-width:600px){
+    #products{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .desc-content{
+        margin:20% auto;
+    }
+}

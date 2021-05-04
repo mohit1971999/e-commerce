@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>E-commerce v1</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/homeStyle.css">
+    </head>
+    <body>
+        <%- include('./partials/header.ejs') %>
+        <div id="description">
+            <div class="desc-content">
+                <div id="descDiv">
+                    <p>Product Description</p>
+                    <button id="closeIcon">&#10006;</button>
+                    <hr>
+                </div>
+                <img id="pdImage">
+                <p id="descript"></p>
+            </div>
+        </div>
+        <div id="products">
+            <% for(var i = 0; i<products.length; i++){ %>
+                <div class="item" id=<%= products[i].pd_id %>>
+                    <img src=<%= "./" + products[i].img_add%> alt="product_image" class="image">
+                    <p class="p_name"><%= products[i].pdname %></p>
+                    <p class="price">Price:<span class='priceData'> <%= products[i].pdprice %></span></p>
+                    <button class="addCart">Add to cart</button>
+                    <button class="description">Product Description</button>
+                </div>
+            <% } %>
+        </div>
+    </body>
+    <script src="./js/script.js"></script>    
+</html>

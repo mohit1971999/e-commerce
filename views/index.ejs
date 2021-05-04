@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>E-commerce login page</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="header">
+            <p>Please Login or Sign Up to proceed.</p>
+        </div>
+        <div>     
+            <p id="result"></p></div>
+        </div>
+        <div id="contain">
+            <div>
+                <button id="btn1">Log In</button>
+                <button id="btn2">Sign Up</button>
+            </div>
+            <div class="login">
+                <form>
+                    <label>Email id*: </label>
+                    <input type="email" placeholder="Enter your email id" id="email" required>
+                    <label>Password*: </label>
+                    <input type="password" placeholder="Enter your password" id="loginPass" required>
+                    <button type="Submit" id="loginSubmit">Log In</button>
+                </form>
+            </div>
+            <div class="signUp">
+                <form id="myform" name="myform">
+                    <label>Choose an image for yourself:</label>
+                    <input type="file" placeholder="Choose image file" name="avatar" id="avatar" accept="image/*" required>
+                    <label>Name*: </label>
+                    <input type="text" placeholder="Enter your name" name="name" id="name" required>
+                    <label>Email id*:</label>
+                    <input type="email" placeholder="Enter your email-id" name="mail" id="mail" required>
+                    <label>Password*: </label>
+                    <input type="password" placeholder="Enter your password" name="password" id="SignUpPass" required>
+                    <label>Confirm Password*: </label>
+                    <input type="password" placeholder="Confirm your password" id="passConfirm" required>
+                    <p id="noMatch">*Your passwords do not match.</p>
+                    <button type="submit" id="signUpSubmit">Sign Up</button>
+                </form>
+            </div>
+    </body>
+    <script src="js/loginScript.js"></script>
+</html>

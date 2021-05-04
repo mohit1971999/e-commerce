@@ -1,0 +1,119 @@
+body{
+    width:100%;
+    height:100%;
+    font-weight: bold;
+    margin-top:50px;
+    padding:0px;
+    background-color: powderblue;
+}
+.header{
+    width:100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    color:darkmagenta;
+}
+#contain{
+    position:relative;
+    display:grid;
+    justify-content:center;
+    align-items: center;
+    width:100%;
+    height:50px;
+}
+label, input, button{
+    display:block;
+    width:100%;
+}
+label, button{
+    margin-top:10px;
+}
+label{
+    font-size: 20px;
+    text-align:center;
+}
+input{
+    font-size: 25px;
+    color:royalblue;
+    border-color: lightskyblue;
+    border-radius:10px;
+}
+button{
+    font-size: 20px;
+}
+#btn1, #btn2{
+    display:inline;
+    border:none;
+    border: 2px solid #17d3cf;
+    border-radius:10px;
+    background-color: white;
+    padding:5px;
+    margin:0px;
+    margin-bottom:20px;
+    font-size: 30px;
+    width:320px;
+}
+#btn1{
+    background-color:springgreen;
+    font-weight: bold;
+}
+#btn2{
+    border:none;
+}
+.login, .signUp{
+    margin:0 auto;
+    background-color: springgreen;
+    padding:20px;
+    border:2px solid #17d3cf;
+    border-radius:15px;
+    width:600px;
+}
+.signUp{
+    display:none;
+}
+#noMatch{
+    color:Red;
+    display:none;
+}
+#result{
+    color:Red;
+    display:block;
+    text-align: center;
+    font-size:25px;
+}
+p{
+    padding:0px;
+    margin-top:0px;
+    margin-left:10px;
+}
+button[type="submit"]{
+    background-color:#33BDFF;
+    border-radius:10px;
+    font-size: 22px;
+    margin:5px;
+    margin-top:15px;
+    font-weight: bold;
+    color:floralwhite;
+}
+input[type="file"]{
+    border-radius:0px;
+}
+@media all and (max-width:600px){
+    .login, .signUp{
+        width:270px;
+        margin:0px;
+    }
+    #btn1, #btn2{
+        width:155px;
+        font-size:25px;
+    }
+    input, button{
+        font-size:20px;
+    }
+    label{
+        font-size:16px;
+    }
+    .header{
+        font-size:20px;
+    }
+}

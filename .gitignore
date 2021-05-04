@@ -1,0 +1,7 @@
+node_modules
+public/user_uploads
+public/product_images/
+public/cart_desc.txt
+*.log
+*.txt
+db.js

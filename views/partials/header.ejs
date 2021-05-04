@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content='width=device-width, initial-scale=1.0'>
+        <link rel='stylesheet' href='./css/header.css'>
+    </head>
+    <body>
+        <div class="top">
+            <img id='user_avatar'>
+            <p id="nameDes"></p>
+            <button type="button" id="view"><a href="/cart.ejs" class="cartLink">Go to cart</a></button>
+            <button type="button" id="logOut"><a href="/">Log Out</a></button>
+        </div>
+    </body>
+    <script>
+        window.addEventListener("load", function(event){
+            var userName = document.getElementById('nameDes');
+            var req = new XMLHttpRequest();
+            req.open("GET", "/name");
+            req.send();
+            req.addEventListener("load", function(){
+                var res = JSON.parse(req.responseText);
+                if(res.hasOwnProperty('name')){
+                    userName.innerHTML = 'Welcome ' + res.name;
+                    user_avatar.src = res.img_add;
+                }
+                else{
+                    window.alert("You have been logged out, please login again.");
+                    window.location.href="/";
+                }
+            });
+        });
+    </script>
+</html>

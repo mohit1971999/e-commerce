@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Your cart</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/cartStyle.css">
+    </head>
+    <body>
+        <%- include('./partials/header.ejs') %>
+        <p id="header">Your Cart..!</p>
+        <button id="back"><a href="/home.ejs" id="product">Back to products page</a></button>
+        <button id="checkout">Checkout</button>
+        <div id="description">
+            <div class="desc-content">
+                <div id="descDiv">
+                    <p>Product Description</p>
+                    <button id="closeIcon">&#10006;</button>
+                    <hr>
+                </div>
+                <img id="pdImage">
+                <p id="descript"></p>
+            </div>
+        </div>
+        <% if(Object.keys(products).length === 0){ %>
+        <div id="empty">
+            <p>No products in the cart.</p>
+        </div>
+        <% } else{ %>
+        <div id="cartProducts">
+            <% for(var i = 0 ;i < products.length ; i++){ %>
+                <div class="item" id=<%= products[i].pd_id %> >
+                    <img src=<%= products[i].img_add %> alt="product_image" class="image">
+                    <p class="p_name"><%= products[i].pdname %></p>
+                    <p class="price">Price: <span class="prod_data"><%= products[i].pdprice %></span></p>
+                    <p class="quantity" style="display: inline-block;">Quantity: <span class="quant"><%= products[i].pdquant %></span></p>
+                    <button class="increase" style="margin-right: 5px;">+</button>
+                    <button class="decrease">-</button>
+                    <br/>
+                    <button class="deleteItem">Delete</button>
+                    <button class="description">Product Description</button>
+                </div>
+            <% } %>
+        </div>
+        <% } %>
+    </body>
+    <script src="js/cartScript.js"></script>
+</html>

@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>E-commerce v1</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/admin.css">
+    </head>
+    <body id="main">
+        <%- include('./partials/header.ejs') %>
+        <br/>
+        <h2 class='heading'>Welcome Admin</h2>
+        <h3 class="subHeading">Your products are as follows:</h3>
+        <div class='form0'>
+            <form id='pdform' method='post' action="/addproduct">
+                <span>
+                    <label for='pdname'>Product Name</label>
+                    <input id='pdname' name='pdname' placeholder="Product Name" required/>
+                </span>
+                <span>
+                    <label for='pddesc'>Product Description</label>
+                    <input id='pddesc' name='pddesc' placeholder="Product Description" required/>
+                </span>
+                <span>
+                    <label for='pdprice'>Product Price</label>
+                    <input id='pdprice' name='pdprice' type='number' min='50' max='500000' step="50" placeholder="Product Price" required/>
+                </span>
+                <span>
+                    <label for='pdquant'>Product Quantity</label>
+                    <input id='pdquant' name='pdquant' type="number" min="0" max="5000" step="5" placeholder="Product Quantity" required/>
+                </span>
+                <span>
+                    <label for='pdimage'>Product Image</label>
+                    <input id='pdimage' name='pdimage' type='file' placeholder='Choose product image' accept="image/*" required/>
+                </span>
+                <span>
+                    <button type='submit'>Add Product</button>
+                </span>
+            </form>
+        </div>
+        <button class='product_page'><a href='/admin'>Add more products</a></button>
+    </body>
+    <script src="./js/admin.js"></script>    
+</html>

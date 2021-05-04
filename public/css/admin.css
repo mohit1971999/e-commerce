@@ -1,0 +1,55 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    background-color: powderblue;
+}
+.heading{
+    margin-left: 40%;
+    display:block;
+    font-size: 35px;
+}
+.form0{
+    display:block;
+    margin:auto;
+    border: 2px solid black;
+    max-width: 750px;
+}
+form{
+    display: block;
+    margin:5% 10%;
+}
+input{
+    display: inline-block;
+    width: 300px;
+    font-size: 25px;
+}
+label{
+    display: inline-block;
+    width:250px;
+    font-size: 25px;
+}
+button{
+    display: block;
+    font-size: 20px;
+    padding:2px;
+    margin:auto;
+    color: white;
+    background-color: #33BDFF;
+}
+span{
+    display: block;
+    margin:20px;
+}
+.product_page{
+    display: block;
+    margin-top:20px;
+}
+.product_page a{
+    text-decoration: none;
+    color: white;
+}
+@media all and (max-width:600px){
+    .heading{
+        margin-left:20%;
+    }
+}

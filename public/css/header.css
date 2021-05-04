@@ -1,0 +1,54 @@
+.top{
+    width:100%;
+    height:60px;
+    border-bottom: 2px solid royalblue;
+    background-color: skyblue;
+}
+#user_avatar{
+    position: relative;
+    display:inline-block;
+    margin-left:5px;
+    margin-top:5px;
+    border-radius: 50%;
+    height:45px;
+    width:45px;
+}
+#nameDes{
+    display:inline;
+    color:royalblue;
+    vertical-align:super;
+    left:50px;
+    top:10px;
+    font-size: 30px;
+    font-weight: bold;
+}
+.top a{
+    text-decoration: none;
+    color: white;
+}
+.top button{
+    font-size:20px;
+    position: absolute;
+    display: inline-block;
+    margin:20px 0px;
+    color:white;
+    background-color: #33BDFF;
+    height:30px;
+    border-radius: 10px;
+}
+#logOut{
+    right:10px;
+    width:100px;
+}
+#view{
+    right:120px;
+    width:120px;
+}
+@media all and (max-width: 600px){
+    .top{
+        height:100px;
+    }
+    .top button{
+        margin:60px;
+    }
+}
